@@ -1,0 +1,20 @@
+<VirtualHost *:80>
+	ServerName online.snstheatre.org
+	ServerAlias tickets.snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.org
+	
+	ErrorLog /data/log/online-error.log
+	CustomLog /data/log/online-access.log combined
+
+	DocumentRoot /var/www/online/
+	DirectoryIndex index.php index.html
+	
+        RewriteEngine on
+        RewriteCond %{HTTP_HOST} ^tickets.snstheatre.org$ [OR]
+        RewriteCond %{HTTP_HOST} ^www.tickets.snstheatre.org$
+        RewriteRule ^(.*)$ "http\:\/\/online\.snstheatre\.org\/tickets" [R=301,L]
+
+	php_admin_flag display_errors off
+	php_admin_flag log_errors on
+</VirtualHost>

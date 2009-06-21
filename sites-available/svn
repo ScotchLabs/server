@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+	ServerName svn.snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.org
+	
+	ErrorLog /data/log/svn-error.log
+	CustomLog /data/log/svn-access.log "%t %u %{SVN-ACTION}e" env=SVN-ACTION
+
+	<Location />
+		DAV svn
+		SVNParentPath /data/svn
+		SVNListParentPath on
+		SVNPathAuthz off
+		AuthType Basic
+		AuthName "Subversion Repository"
+		AuthUserFile /data/svn/htpasswd
+		Require valid-user
+	</Location>
+</VirtualHost>

@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+ServerName mantis.snstheatre.org
+
+ServerAdmin webmaster@snstheatre.org
+	
+DocumentRoot /var/www/mantis/
+
+<Directory /var/www/mantis>
+AuthType Basic
+AuthName "Mantis"
+AuthUserFile /data/svn/htpasswd
+Require valid-user
+</Directory>
+
+</VirtualHost>

@@ -1,0 +1,22 @@
+<VirtualHost *:80>
+	ServerName online.dev.snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.online
+	
+	ErrorLog /data/log/online-dev-error.log
+	CustomLog /data/log/online-dev-access.log combined
+
+	DocumentRoot /var/www/online-dev/
+	DirectoryIndex index.php index.html
+	
+	php_admin_value error_reporting -1
+	php_admin_flag display_errors on
+	php_admin_flag log_errors off
+
+	ProxyTimeout 300
+
+	<Location "/soda/app">
+		ProxyPass http://localhost:15213
+		ProxyPassReverse http://localhost:15213
+	</Location>
+</VirtualHost>

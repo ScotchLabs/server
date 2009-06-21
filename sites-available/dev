@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+	ServerName dev.snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.org
+	
+	ErrorLog /data/log/dev-error.log
+	CustomLog /data/log/dev-access.log combined
+
+	DocumentRoot /var/www/dev/
+	DirectoryIndex index.php index.html
+	
+	php_admin_value error_reporting -1
+	php_admin_flag display_errors on
+	php_admin_flag log_errors off
+
+	UserDir public_html
+</VirtualHost>

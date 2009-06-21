@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+	ServerName www.snstheatre.org
+	ServerAlias snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.org
+	
+	ErrorLog /data/log/org-error.log
+	CustomLog /data/log/org-access.log combined
+
+	DocumentRoot /var/www/org/
+	DirectoryIndex index.php index.html
+	
+	php_admin_flag display_errors off
+	php_admin_flag log_errors on
+</VirtualHost>
