@@ -1,0 +1,20 @@
+<VirtualHost *:80>
+	ServerName upload.snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.org
+	
+	ErrorLog /data/log/upload-error.log
+	CustomLog /data/log/upload-access.log combined
+
+	DocumentRoot /data/upload/
+	DirectoryIndex index.php index.html
+	
+	RemoveHandler .php .php4 .php5
+	DefaultType None
+</VirtualHost>
+<Directory /data/upload>
+	Order Allow,Deny
+	<FilesMatch "\.(gif|jpe?g|png|doc|pdf|xls|ppt|mp3|zip|tar\.gz)">
+		Allow from all
+	</FilesMatch>
+</Directory>
