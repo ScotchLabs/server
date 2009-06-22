@@ -15,7 +15,7 @@
 <Directory /data/upload>
 	AllowOverride none
 	Order Allow,Deny
-	<FilesMatch "\.(gif|jpe?g|png|doc|pdf|xls|ppt|mp3|zip|tar\.gz)">
+	<FilesMatch "\.(gif|jpe?g|png|doc|pdf|xls|ppt|mp3|zip|tar\.gz)$">
 		Allow from all
 	</FilesMatch>
 </Directory>
