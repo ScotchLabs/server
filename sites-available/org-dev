@@ -15,4 +15,8 @@
 <Location /bin>
         Deny from all
 </Location>
+<Location /migrations>
+Deny from all
+</Location>
 </VirtualHost>
+
