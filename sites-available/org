@@ -12,4 +12,7 @@
 	
 	php_admin_flag display_errors off
 	php_admin_flag log_errors on
+<Location /bin>
+Deny from all
+</Location>
 </VirtualHost>

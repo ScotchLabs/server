@@ -19,4 +19,7 @@
 		ProxyPass http://localhost:15213
 		ProxyPassReverse http://localhost:15213
 	</Location>
+<Location /bin>
+        Deny from all
+</Location>
 </VirtualHost>
