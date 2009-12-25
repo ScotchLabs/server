@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+	ServerName scotch.dev.snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.org
+	
+	ErrorLog /data/log/rails-error.log
+	CustomLog /data/log/rails-access.log combined
+
+	DocumentRoot /var/www/scotch-dev/public
+
+	<Directory /var/www/scotch-dev/>
+		AllowOverride all
+		Options -MultiViews
+	</Directory>
+</VirtualHost>
