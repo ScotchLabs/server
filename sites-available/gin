@@ -1,16 +1,16 @@
 <VirtualHost *:80>
-	ServerName scotch.dev.snstheatre.org
+	ServerName gin.snstheatre.org
 
 	ServerAdmin webmaster@snstheatre.org
 	
 	ErrorLog /data/log/rails-error.log
 	CustomLog /data/log/rails-access.log combined
 
-	DocumentRoot /var/www/scotch-dev/public
+	DocumentRoot /var/www/gin/public
 
-	RailsEnv development
+	RailsEnv production
 
-	<Directory /var/www/scotch-dev/>
+	<Directory /var/www/gin/>
 		AllowOverride all
 		Options -MultiViews
 	</Directory>

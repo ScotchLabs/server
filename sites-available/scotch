@@ -8,6 +8,8 @@
 
 	DocumentRoot /var/www/scotch/public
 
+	RailsEnv production
+
 	<Directory /var/www/scotch/>
 		AllowOverride all
 		Options -MultiViews
