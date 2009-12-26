@@ -1,0 +1,21 @@
+<VirtualHost *:80>
+	ServerName npp.snstheatre.org
+
+	ServerAdmin webmaster@snstheatre.org
+	
+	ErrorLog /data/log/npp-error.log
+	CustomLog /data/log/npp-access.log combined
+
+	DocumentRoot /data/npp
+	DirectoryIndex index.php index.html
+
+	<Location />
+		Dav on
+		AuthType Basic
+		AuthName "No Parking Players Site"
+		AuthUserFile /data/svn/htpasswd
+		<LimitExcept GET OPTIONS>
+			Require valid-user
+		</LimitExcept>
+	</Location>
+</VirtualHost>
