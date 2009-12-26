@@ -10,6 +10,7 @@
 	DirectoryIndex index.php index.html
 
 	php_admin_value open_basedir /data/npp
+	php_flag engine off
 
 	<Location />
 		Dav on
