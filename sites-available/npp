@@ -9,6 +9,8 @@
 	DocumentRoot /data/npp
 	DirectoryIndex index.php index.html
 
+	php_admin_value open_basedir /data/npp
+
 	<Location />
 		Dav on
 		AuthType Basic
