@@ -15,10 +15,11 @@
 
 	ProxyTimeout 300
 
-	<Location "/soda/app">
-		ProxyPass http://localhost:15213
-		ProxyPassReverse http://localhost:15213
-	</Location>
+        ProxyPass /soda/css     !
+        ProxyPass /soda/js      !
+        ProxyPass /soda     http://localhost:7070/http-bind/
+        ProxyPassReverse        /soda       http://localhost:7070/http-bind/
+
 <Location /bin>
         Deny from all
 </Location>
