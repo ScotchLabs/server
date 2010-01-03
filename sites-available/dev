@@ -15,10 +15,6 @@
 
 	UserDir public_html
 
-	<Directory /home>
-		AllowOverride Options
-	</Directory>
-
         ProxyPass       /~dfreeman/online/soda/css      !
         ProxyPass       /~dfreeman/online/soda/js       !
         ProxyPass       /~dfreeman/online/soda          http://localhost:7070/http-bind/
