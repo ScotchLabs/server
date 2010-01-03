@@ -16,7 +16,7 @@
 		Dav on
 		AuthType Basic
 		AuthName "No Parking Players Site"
-		AuthUserFile /data/svn/htpasswd
+		AuthUserFile /data/npp.htpasswd
 		<LimitExcept GET OPTIONS>
 			Require valid-user
 		</LimitExcept>
