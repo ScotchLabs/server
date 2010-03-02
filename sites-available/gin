@@ -1,5 +1,7 @@
 <VirtualHost *:80>
 	ServerName gin.snstheatre.org
+	ServerAlias www.snstheatre.org
+	ServerAlias snstheatre.org
 
 	ServerAdmin webmaster@snstheatre.org
 	
