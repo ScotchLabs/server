@@ -8,7 +8,7 @@
 
 	DocumentRoot /var/www/scotch/public
 
-	RailsEnv production
+	RackEnv production
 
 	<Directory /var/www/scotch/>
 		AllowOverride all

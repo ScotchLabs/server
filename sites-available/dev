@@ -15,8 +15,7 @@
 
 	UserDir public_html
 
-        ProxyPass       /~dfreeman/online/soda/css      !
-        ProxyPass       /~dfreeman/online/soda/js       !
+        ProxyPass       /~dfreeman/online/soda/soda.min.js       !
         ProxyPass       /~dfreeman/online/soda          http://localhost:7070/http-bind/
-        ProxyPassReverse        /~dfreeman/online/soda  http://ocalhost:7070/http-bind/
+        ProxyPassReverse        /~dfreeman/online/soda  http://localhost:7070/http-bind/
 </VirtualHost>

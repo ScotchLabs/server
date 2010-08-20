@@ -15,8 +15,7 @@
 
 	ProxyTimeout 300
 
-        ProxyPass /soda/css     !
-        ProxyPass /soda/js      !
+	ProxyPass /soda/soda.min.js	!
         ProxyPass /soda     http://localhost:7070/http-bind/
         ProxyPassReverse        /soda       http://localhost:7070/http-bind/
 
